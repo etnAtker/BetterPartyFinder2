@@ -449,6 +449,29 @@ namespace BetterPartyFinder {
                 this.Plugin.Config.Save();
             }
 
+            if (ImGui.CollapsingHeader("Black List")) {
+                if (ImGui.Button("Clear")) {
+                    filter.BlackListJobs = 0;
+                    this.Plugin.Config.Save();
+                }
+
+                foreach (var job in (JobFlags[])Enum.GetValues(typeof(JobFlags))) {
+                    var selected = (filter.BlackListJobs & job) > 0;
+                    if (!ImGui.Selectable(job.ClassJob(this.Plugin.DataManager)?.Name ?? "???", ref selected)) {
+                        continue;
+                    }
+
+                    if (selected) {
+                        filter.BlackListJobs |= job;
+                    }
+                    else {
+                        filter.BlackListJobs &= ~job;
+                    }
+
+                    this.Plugin.Config.Save();
+                }
+            }
+
             var toRemove = new HashSet<int>();
 
             for (var i = 0; i < filter.Jobs.Count; i++) {

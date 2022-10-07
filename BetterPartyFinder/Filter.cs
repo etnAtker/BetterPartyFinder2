@@ -80,6 +80,22 @@ namespace BetterPartyFinder {
                 return false;
             }
 
+            // filter based on job black list
+            if (filter.BlackListJobs > 0) {
+                var present = listing.RawJobsPresent.ToArray();
+
+                foreach (var possibleJob in (JobFlags[])Enum.GetValues(typeof(JobFlags))) {
+                    if (!filter.BlackListJobs.HasFlag(possibleJob)) {
+                        continue;
+                    }
+
+                    var job = possibleJob.ClassJob(this.Plugin.DataManager);
+                    if (present.Contains((byte)job.RowId)) {
+                        return false;
+                    }
+                }
+            }
+
             // filter based on jobs (slow?)
             if (filter.Jobs.Count > 0 && !listing[SearchAreaFlags.AllianceRaid]) {
                 var slots = listing.Slots.ToArray();
