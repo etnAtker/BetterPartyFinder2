@@ -1,4 +1,5 @@
-{
+[
+  {
   "Author": "ascclemens, etnAtker",
   "Name": "Better Party Finder modE",
   "InternalName": "BetterPartyFinderE",
@@ -12,4 +13,5 @@
   "DownloadLinkInstall": "https://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip",
   "DownloadLinkUpdate": "https://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip",
   "DownloadLinkTesting": "https://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip"
-}
+  }
+] 
