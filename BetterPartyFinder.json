@@ -10,8 +10,8 @@
     "DalamudApiLevel": 7,
     "LoadPriority": 0,
     "Punchline": "Use advanced Party Finder filter presets.",
-    "DownloadLinkInstall": "hhttps://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip",
-    "DownloadLinkUpdate": "hhttps://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip",
-    "DownloadLinkTesting": "hhttps://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip"
+    "DownloadLinkInstall": "https://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip",
+    "DownloadLinkTesting": "https://github.com/etnAtker/BetterPartyFinder2/releases/download/v1.2.6/latest.zip"
   }
 ]
